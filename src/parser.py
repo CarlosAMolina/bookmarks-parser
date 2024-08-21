@@ -15,6 +15,10 @@ class _Parser:
     def _process_beautiful_soup(self, soup: BeautifulSoup):
         print(soup.prettify())
         print(type(soup))
+        folders = soup.find_all("h3")
+        for folder in folders:
+            print(folder.__dict__)
+            breakpoint()
 
 
 # TODO rm
