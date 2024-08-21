@@ -19,8 +19,3 @@ class _Parser:
         for folder in folders:
             print(folder.__dict__)
             breakpoint()
-
-
-# TODO rm
-def foo() -> int:
-    return 1
