@@ -1,5 +1,6 @@
-import parser
+from parser import parse_file
 
 
 if __name__ == "__main__":
-    parser.foo()
+    path_name = "/tmp/bookmarks.html"
+    parse_file(path_name)
