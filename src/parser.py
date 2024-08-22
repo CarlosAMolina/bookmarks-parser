@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 
 def parse_file(path_name: str):
     print(f"Start parsing {path_name}")
-    for url in _FileParser().get_urls(path_name):
-        print(url)
+    for url_parsed in _FileParser().get_urls(path_name):
+        print(url_parsed)
 
 
 class _Url:
