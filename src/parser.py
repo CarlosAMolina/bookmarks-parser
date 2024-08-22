@@ -17,11 +17,14 @@ class _Url:
         name: str,
     ):
         self._creation_date_epoch_str = creation_date_epoch_str
-        self.href = href
-        self.name = name
+        self._href = href
+        self._name = name
+
+    def __repr__(self) -> str:
+        return f"[{self._creation_date_str} {self._name}]({self._href})"
 
     @property
-    def creation_date_str(self) -> str:
+    def _creation_date_str(self) -> str:
         creation_date_epoch = int(self._creation_date_epoch_str)
         creation_date = self._get_datetime_from_epoch_str(creation_date_epoch)
         return creation_date.strftime("%Y%m%d")
