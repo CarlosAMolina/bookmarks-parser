@@ -12,5 +12,10 @@ class _Parser:
         with open(path_name, "r") as f:
             soup = BeautifulSoup(f, "html.parser")
         bookmarks_toolbar_dt: bs4.element.Tag = soup.dl.p.dt
-        print(bookmarks_toolbar_dt)
-        print(type(bookmarks_toolbar_dt))
+        #print(bookmarks_toolbar_dt)
+        #print(type(bookmarks_toolbar_dt))
+        inmediate_folders = bookmarks_toolbar_dt.dl.p.find_all('dt', recursive=False)
+        for folder in inmediate_folders:
+            print('----------------')
+            print(folder)
+            # TODO why only 1 folder is detected and not 2?
